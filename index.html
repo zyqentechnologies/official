@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Zyqen Technologies — Business Technology & Digital Solutions">
+<meta name="theme-color" content="#05070d">
+<title>Zyqen Technologies | Business Technology & Digital Solutions</title>
+<style>
+:root{--bg:#05070d;--card:#0b111c;--text:#eef7ff;--muted:#9aaabd;--line:#183049;--blue:#1295ff;--cyan:#18d9e8}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;background:radial-gradient(circle at 80% 0,#06325b33,transparent 35%),var(--bg);color:var(--text);line-height:1.6}
+a{text-decoration:none;color:inherit}.wrap{width:min(1160px,92%);margin:auto}
+header{position:sticky;top:0;z-index:20;background:#05070ddd;backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:11px;font-weight:800}
+.brand img{width:46px;height:46px;object-fit:cover;border-radius:11px}.links{display:flex;align-items:center;gap:25px;color:#c8d5e4;font-size:.94rem}
+.links a:hover{color:#fff}.pill{border:1px solid #177fc055;border-radius:999px;padding:9px 15px;background:#159cff12}.menu{display:none;background:none;border:0;color:white;font-size:25px}
+.hero{min-height:calc(100vh - 76px);display:grid;align-items:center;padding:75px 0}.heroGrid{display:grid;grid-template-columns:1.15fr .85fr;gap:55px;align-items:center}
+.badge,.kicker{color:#65dfff;font-weight:800;text-transform:uppercase;letter-spacing:.12em;font-size:.75rem}
+.badge{display:inline-block;border:1px solid #238cc044;border-radius:99px;padding:7px 11px;background:#159cff0d}
+h1{font-size:clamp(2.8rem,6vw,5.3rem);line-height:1.02;letter-spacing:-.055em;margin:20px 0}
+.grad{background:linear-gradient(100deg,#fff,#61dfff,#158cff);background-clip:text;color:transparent}
+.hero p,.sectionHead p,.panel p{color:var(--muted)}.hero p{font-size:1.07rem;max-width:680px}
+.actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:30px}.btn{display:inline-flex;justify-content:center;align-items:center;border:1px solid var(--line);border-radius:12px;padding:12px 19px;font-weight:750;cursor:pointer}
+.primary{border:0;background:linear-gradient(135deg,#128cff,#16d6e6);color:#02111a}.secondary{background:#ffffff08}
+.logoBox{width:min(390px,85vw);aspect-ratio:1;margin:auto;border:1px solid var(--line);border-radius:30px;padding:28px;background:#0a101bcc;box-shadow:0 30px 90px #008cff1c;display:grid;place-items:center}
+.logoBox img{width:100%;height:100%;object-fit:contain;border-radius:22px}
+section{padding:90px 0;scroll-margin-top:80px}.sectionHead{max-width:720px;margin-bottom:38px}
+h2{font-size:clamp(2rem,4vw,3.1rem);line-height:1.1;letter-spacing:-.04em;margin:9px 0 13px}
+.about,.contact{display:grid;grid-template-columns:1fr 1fr;gap:18px}.panel{background:linear-gradient(145deg,#0e1726e6,#080d16e6);border:1px solid var(--line);border-radius:20px;padding:28px}
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.service{min-height:245px}.num{color:#58dcff;font-weight:800;font-size:.78rem}.service h3{margin:13px 0 8px;font-size:1.15rem}.service p{font-size:.91rem}.service ul{margin:13px 0 0 18px;color:#b8c7d8;font-size:.86rem}.service li{margin:4px 0}
+.process{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.step strong{display:block;margin:8px 0 4px}.step p{font-size:.9rem}
+.contactInfo p{margin:11px 0}.email{color:#70ddff;font-weight:750;word-break:break-word}
+form{display:grid;gap:13px}label{font-size:.84rem;color:#d0dcea;font-weight:650}input,select{width:100%;margin-top:6px;padding:12px 13px;background:#060a11;color:white;border:1px solid #23374d;border-radius:11px;outline:none}input:focus,select:focus{border-color:#1ac4e4}
+.status{display:none;padding:11px 13px;border-radius:10px;color:#aeefff;background:#16d9e812;border:1px solid #16d9e844}.error{color:#ffc2c2;background:#ff555510;border-color:#ff555544}
+footer{border-top:1px solid var(--line);padding:30px 0;color:#8292a7}.foot{display:flex;justify-content:space-between;align-items:center;gap:15px}.footBrand{display:flex;align-items:center;gap:9px}.footBrand img{width:35px;height:35px;object-fit:cover;border-radius:8px}
+@media(max-width:900px){.heroGrid,.about,.contact{grid-template-columns:1fr}.services,.process{grid-template-columns:1fr 1fr}.logoBox{width:300px}.heroLogo{order:-1}}
+@media(max-width:650px){.links{display:none;position:absolute;top:76px;left:0;right:0;background:#070b12;padding:18px 4%;flex-direction:column;align-items:flex-start}.links.open{display:flex}.menu{display:block}.services,.process{grid-template-columns:1fr}.hero{padding:60px 0}.foot{flex-direction:column;align-items:flex-start}section{padding:70px 0}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+<a class="brand" href="#home"><img src="assets/zyqen-logo.png" alt="Zyqen Technologies logo"><span>Zyqen Technologies</span></a>
+<button class="menu" id="menu" aria-label="Menu">☰</button>
+<nav class="links" id="links"><a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#process">Process</a><a class="pill" href="#contact">Enquire</a></nav>
+</div></header>
+<main>
+<section class="hero" id="home"><div class="wrap heroGrid"><div>
+<span class="badge">Business Technology & Digital Solutions</span>
+<h1>Technology that helps your business <span class="grad">move forward.</span></h1>
+<p>Zyqen Technologies provides practical digital, technology and business-support solutions to help businesses establish their online presence, improve operations and automate repetitive work.</p>
+<div class="actions"><a class="btn primary" href="#services">Explore Services</a><a class="btn secondary" href="#contact">Send an Enquiry</a></div>
+</div><div class="heroLogo"><div class="logoBox"><img src="assets/zyqen-logo.png" alt="Zyqen Technologies"></div></div></div></section>
+
+<section id="about"><div class="wrap"><div class="sectionHead"><span class="kicker">About Zyqen</span><h2>One technology partner for growing businesses.</h2><p>Our approach combines digital presence, software development, artificial intelligence, automation, IT support and communication services under one service partner.</p></div>
+<div class="about"><div class="panel"><h3>What we solve</h3><p>From launching a new business and building a professional online presence to improving lead capture, automating repetitive work and organizing internal workflows, we focus on practical solutions around business requirements.</p></div>
+<div class="panel"><h3>Who we serve</h3><p>Startups, small and medium-sized businesses, local businesses and service providers, professionals, educational and training organizations, e-commerce businesses and organizations looking to modernize workflows.</p></div></div></div></section>
+
+<section id="services"><div class="wrap"><div class="sectionHead"><span class="kicker">Our Services</span><h2>Digital, technology & business support.</h2><p>Services for one-time projects, ongoing support and custom business requirements.</p></div>
+<div class="services">
+<article class="panel service"><span class="num">01</span><h3>Social Media Management & Digital Presence</h3><p>Build and manage a stronger online presence.</p><ul><li>Account setup & optimization</li><li>Content planning & posting</li><li>Business profile optimization</li><li>Basic analytics & strategy</li></ul></article>
+<article class="panel service"><span class="num">02</span><h3>Public Relations & Business Communication</h3><p>Support for digital PR and business communication.</p><ul><li>Digital PR support</li><li>Business announcements</li><li>Brand communication</li><li>Press-release assistance</li></ul></article>
+<article class="panel service"><span class="num">03</span><h3>Website Solutions</h3><p>Professional web presence and practical integrations.</p><ul><li>Business websites & landing pages</li><li>Responsive development</li><li>Forms & integrations</li><li>SEO, deployment & maintenance</li></ul></article>
+<article class="panel service"><span class="num">04</span><h3>Software & Custom Applications</h3><p>Business software built around your workflow.</p><ul><li>Custom software</li><li>Web apps & dashboards</li><li>CRM-style workflows</li><li>API & database integrations</li></ul></article>
+<article class="panel service"><span class="num">05</span><h3>AI & Business Automation</h3><p>Reduce repetitive work with modern automation.</p><ul><li>AI-powered workflows</li><li>Lead management automation</li><li>Document & data workflows</li><li>Custom automation solutions</li></ul></article>
+<article class="panel service"><span class="num">06</span><h3>IT Support & Technology Services</h3><p>Practical technology support for everyday business needs.</p><ul><li>IT setup & troubleshooting</li><li>Domain, hosting & email support</li><li>Technical maintenance</li><li>Technology consultation</li></ul></article>
+</div></div></section>
+
+<section id="process"><div class="wrap"><div class="sectionHead"><span class="kicker">Our Work Process</span><h2>From requirement to support.</h2></div>
+<div class="process">
+<div class="panel step"><span class="num">01</span><strong>Requirement Discussion</strong><p>Understand the business objective and current challenges.</p></div>
+<div class="panel step"><span class="num">02</span><strong>Solution Planning</strong><p>Define scope, technology, deliverables and timeline.</p></div>
+<div class="panel step"><span class="num">03</span><strong>Development & Implementation</strong><p>Build or configure the agreed solution.</p></div>
+<div class="panel step"><span class="num">04</span><strong>Testing & Review</strong><p>Test functionality, usability and business requirements.</p></div>
+<div class="panel step"><span class="num">05</span><strong>Deployment</strong><p>Launch the solution and provide the required handover.</p></div>
+<div class="panel step"><span class="num">06</span><strong>Support & Improvement</strong><p>Provide maintenance, updates and future enhancements.</p></div>
+</div></div></section>
+
+<section id="contact"><div class="wrap"><div class="sectionHead"><span class="kicker">Contact</span><h2>Tell us what your business needs.</h2><p>Submit an enquiry and it will be saved in your Google Sheet.</p></div>
+<div class="contact"><div class="panel contactInfo"><h3>Zyqen Technologies</h3><p>Business Technology & Digital Solutions</p><p class="email">zyqentechnologies@gmail.com</p><p>One-time projects, monthly support, custom packages, automation projects and technology consultation.</p></div>
+<div class="panel"><form id="form">
+<label>Full Name<input name="name" required placeholder="Your full name"></label>
+<label>Gmail / Email Address<input name="email" type="email" required placeholder="you@gmail.com"></label>
+<label>Phone Number<input name="phone" type="tel" required placeholder="+91 XXXXX XXXXX"></label>
+<label>Select Service<select name="service" required><option value="">Choose a service</option><option>Social Media Management & Digital Presence</option><option>Public Relations & Business Communication</option><option>Website Solutions</option><option>Software & Custom Applications</option><option>AI & Business Automation</option><option>IT Support & Technology Services</option></select></label>
+<button class="btn primary" id="submit" type="submit">Submit Enquiry</button><div id="status" class="status"></div>
+</form></div></div></div></section>
+</main>
+<footer><div class="wrap foot"><div class="footBrand"><img src="assets/zyqen-logo.png" alt=""><strong>Zyqen Technologies</strong></div><small>© 2026 Zyqen Technologies. Business Technology & Digital Solutions.</small></div></footer>
+<script>
+const APPS_SCRIPT_URL="https://script.google.com/macros/s/AKfycbw5hOqLRo9nLwjrhtKzNharNmP9mhH_tEJzTRVCkW8z9pmW1KOSQQUSnWkHWqnr9jkhPw/exec";
+const menu=document.getElementById("menu"),links=document.getElementById("links");
+menu.onclick=()=>links.classList.toggle("open");
+links.querySelectorAll("a").forEach(a=>a.onclick=()=>links.classList.remove("open"));
+const form=document.getElementById("form"),status=document.getElementById("status"),submit=document.getElementById("submit");
+form.onsubmit=async e=>{
+ e.preventDefault(); status.style.display="none";
+ if(APPS_SCRIPT_URL.includes("PASTE_YOUR")){status.textContent="Google Apps Script is not connected yet.";status.className="status error";status.style.display="block";return}
+ submit.disabled=true;submit.textContent="Sending...";
+ try{
+  const data=Object.fromEntries(new FormData(form).entries());
+  const r=await fetch(APPS_SCRIPT_URL,{method:"POST",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify(data)});
+  const result=await r.json();
+  if(!result.success)throw new Error(result.message);
+  form.reset();status.textContent="Thank you! Your enquiry has been submitted successfully.";status.className="status";status.style.display="block";
+ }catch(err){status.textContent="Unable to submit right now. Please email zyqentechnologies@gmail.com.";status.className="status error";status.style.display="block"}
+ finally{submit.disabled=false;submit.textContent="Submit Enquiry"}
+};
+</script>
+</body></html>
